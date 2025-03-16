@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Animation & Transition</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 600px;
+            background-color: #b677c2;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .animatedtext {
+            font-size: 30px;
+            font-weight: bold;
+            opacity: 0;
+            transform: scale(0.5);/*The text starts small.*/
+            animation: fade-zoom 2s ease-in-out forwards; /*This will run a keyframe animation (fade-zoom) for 2 seconds*/
+            transition: color 0.5s ease, transform 0.5s ease; /*The text color will change  when hovered and text will grow when hovered*/
+        }
+
+        @keyframes fade-zoom {
+            0% {  /*The text starts invisible and small*/
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            50% {/*The text is fully visible and slightly bigger*/
+                opacity: 1;
+                transform: scale(1.2);
+            }
+            100% {/*The text is fully visible at normal size.*/
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /*  hover */
+        .animatedtext:hover {
+            color: #10100f;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="animatedtext">
+         Hover Over Me! 
+    </div>
+
+</body>
+</html>

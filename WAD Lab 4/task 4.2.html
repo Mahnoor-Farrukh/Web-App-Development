@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">  
+    <style>
+        .form-container {
+            max-width: 900px;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-label {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        /* Moves Address, Gender, and Age labels down */
+        .adjust-label {
+            margin-top: 8px; 
+        }
+    </style>
+</head>
+<body class="d-flex flex-column justify-content-center align-items-center vh-100 bg-light">
+
+    <!--  Student Management -->
+    <h2 class="mb-4 text-center">Student Management</h2>
+
+    <div class="form-container">
+        <form class="row g-3">
+
+          <!-- Form Title -->
+       <div class="w-100 bg-light py-2 px-3 border">
+    <h5 class="text-start m-0 text-black">Registration Form</h5>
+  </div>
+
+            <!-- Name Field -->
+            <div class="col-md-6">
+                <label for="inputname" class="form-label">Name</label>
+                <input type="text" class="form-control" id="inputname">
+            </div>
+            
+            <!-- Education Field -->
+            <div class="col-md-6">
+                <label for="inputedu" class="form-label">Education</label>
+                <input type="text" class="form-control" id="inputedu">
+            </div>
+            
+            <div class="col-12 row">
+                <!-- Address Field -->
+                <div class="col-md-4">
+                    <label for="inputAddress" class="form-label adjust-label">Address</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                </div>
+                
+                <!-- Gender Field -->
+                <div class="col-md-4">
+                    <label for="gender" class="form-label adjust-label">Gender</label>
+                    <select id="gender" class="form-select">
+                        <option selected disabled>Choose...</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+                
+                <!-- Age Field -->
+                <div class="col-md-4">
+                    <label for="age" class="form-label adjust-label">Age</label>
+                    <input type="number" class="form-control" id="age" placeholder="Enter age">
+                </div>
+            </div>
+
+            <!-- CNIC Upload Field -->
+            <div class="col-12">
+                <label for="cnicUpload" class="form-label">CNIC Upload</label>
+                <input type="file" class="form-control" id="cnicUpload" accept=".jpg, .jpeg, .png, .pdf">
+            </div>
+
+            <!-- About Yourself Field -->
+            <div class="col-12">
+                <label for="aboutYourself" class="form-label">About Yourself</label>
+                <textarea class="form-control" id="aboutYourself" rows="2"></textarea>
+            </div>
+
+            <!-- Terms and Conditions Radio Button -->
+            <div class="col-12">
+                <label class="form-label">Terms and Conditions</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="terms" id="termsAgree">
+                    <label class="form-check-label" for="termsAgree">I agree to the terms and conditions</label>
+                </div>
+            </div>
+
+            <div class="col-12 text-center">
+                <button type="submit" class="btn btn-primary w-100">Register</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
